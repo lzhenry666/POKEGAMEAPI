@@ -5,6 +5,11 @@
     "fs": "^0.0.1-security",
     "typescript": "^5.0.2"
   },
+  "scripts": {
+    "build": "browserify ./src/index.ts -p [ tsify ] -o ./assets/bundle.js",
+    "watch": "watchify ./src/index.ts -p [ tsify ] -o ./assets/bundle.js"
+  },
+
   "mappings": [
     {
       "src": "./src/style.sass",
